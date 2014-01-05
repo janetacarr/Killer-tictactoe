@@ -32,6 +32,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6302FA1B1879C448001639D2 /* grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grid.png; sourceTree = "<group>"; };
+		6302FA1C1879C448001639D2 /* o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = o.png; sourceTree = "<group>"; };
+		6302FA1D1879C448001639D2 /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
 		6306BC21187891E800078DB0 /* Killer-tictactoe */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Killer-tictactoe"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6306BC24187891E800078DB0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6306BC26187891E800078DB0 /* Killer_tictactoe.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Killer_tictactoe.1; sourceTree = "<group>"; };
@@ -63,6 +66,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6302FA1A1879C448001639D2 /* textures */ = {
+			isa = PBXGroup;
+			children = (
+				6302FA1B1879C448001639D2 /* grid.png */,
+				6302FA1C1879C448001639D2 /* o.png */,
+				6302FA1D1879C448001639D2 /* x.png */,
+			);
+			path = textures;
+			sourceTree = "<group>";
+		};
 		6306BC18187891E800078DB0 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +86,7 @@
 				6306BC2D1878920D00078DB0 /* OpenGL.framework */,
 				6306BC23187891E800078DB0 /* Killer-tictactoe */,
 				6306BC22187891E800078DB0 /* Products */,
+				6302FA1A1879C448001639D2 /* textures */,
 			);
 			sourceTree = "<group>";
 		};
@@ -269,6 +283,7 @@
 				6306BC2C187891E800078DB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

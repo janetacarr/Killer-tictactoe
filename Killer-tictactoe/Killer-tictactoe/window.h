@@ -20,7 +20,7 @@ public:
     //Deconstructor
     ~Window();
     //Draw function just a wrapper around the SDL_RenderCopy
-    void Draw(SDL_Texture* tex, SDL_Rect *srcRect, SDL_Rect &dstRect);
+    void Draw(SDL_Texture* tex, SDL_Rect *srcRect, SDL_Rect *dstRect);
     //Clear function is a wrapper for RenderClear
     void Clear();
     //Present is also a wrapper for RenderPresent function

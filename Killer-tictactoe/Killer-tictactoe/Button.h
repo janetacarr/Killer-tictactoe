@@ -10,5 +10,40 @@
 #define __Killer_tictactoe__Button__
 
 #include <iostream>
+#include "SDL2/SDL.h"
+#include "SDL2_image/SDL_image.h"
 
+enum buttonSprite {
+    BUTTON_BLANK = 0,
+    BUTTON_X = 1,
+    BUTTON_O = 2
+};
+
+class Button {
+public:
+    //Constructor
+    Button();
+    //Deconstructor
+    ~Button();
+    
+    void setPosition(int x, int y);
+    //Handle mouse button click event on the button
+    void handleEvent(SDL_Event* e);
+    //Render's button state in the form of texture in the background, so Window's present method can push it to the front.
+    void render();
+    
+private:
+    //Button texture width and height
+    int texWidth, texHeight;
+    
+    int buttonWidth, buttonHeight;
+    //Player states, either 1 or 2.
+    int player;
+    //Coordinates the button, the upper left hand corner
+    SDL_Point Position;
+    //Buttn texture. Initially blank/null.
+    SDL_Texture* texture;
+    
+    buttonSprite currentSprite;
+};
 #endif /* defined(__Killer_tictactoe__Button__) */

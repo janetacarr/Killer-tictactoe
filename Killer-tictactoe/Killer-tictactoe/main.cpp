@@ -15,12 +15,9 @@
 int main(int argc, const char * argv[])
 {
     Window win = Window("Killer Tic Tac Toe");
-    SDL_Texture* texture = win.LoadImage("/Users/justincarr/grid.png");
-    SDL_Rect dstRect;
-    dstRect.x = 0;
-    dstRect.y = 0;
-    dstRect.w = 600;
-    dstRect.h = 600;
+    //Figure out way to load texture from project directory, rather than full directory.
+    SDL_Texture* texture = win.LoadImage("/Users/justincarr/Killer-tictactoe/Killer-tictactoe/textures/grid.png");
+    
     //Game loop;
     bool quit = false;
     SDL_Event e;
@@ -44,7 +41,7 @@ int main(int argc, const char * argv[])
         win.Clear();
         
         
-        win.Draw(texture, NULL, dstRect);
+        win.Draw(texture, NULL, NULL);
         win.Present();
     }
     win.~Window();
