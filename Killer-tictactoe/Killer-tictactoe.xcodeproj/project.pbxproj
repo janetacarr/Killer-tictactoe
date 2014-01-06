@@ -15,7 +15,6 @@
 		6306BC371878929300078DB0 /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6306BC361878929300078DB0 /* SDL2_ttf.framework */; };
 		6306BC3A1878937600078DB0 /* window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6306BC381878937600078DB0 /* window.cpp */; };
 		6306BC3D1878BB8D00078DB0 /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6306BC3B1878BB8D00078DB0 /* Button.cpp */; };
-		6306BC401878BBA800078DB0 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6306BC3E1878BBA800078DB0 /* Texture.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,8 +46,6 @@
 		6306BC391878937600078DB0 /* window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = window.h; sourceTree = "<group>"; };
 		6306BC3B1878BB8D00078DB0 /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Button.cpp; sourceTree = "<group>"; };
 		6306BC3C1878BB8D00078DB0 /* Button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Button.h; sourceTree = "<group>"; };
-		6306BC3E1878BBA800078DB0 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
-		6306BC3F1878BBA800078DB0 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +104,6 @@
 				6306BC391878937600078DB0 /* window.h */,
 				6306BC3B1878BB8D00078DB0 /* Button.cpp */,
 				6306BC3C1878BB8D00078DB0 /* Button.h */,
-				6306BC3E1878BBA800078DB0 /* Texture.cpp */,
-				6306BC3F1878BBA800078DB0 /* Texture.h */,
 			);
 			path = "Killer-tictactoe";
 			sourceTree = "<group>";
@@ -165,7 +160,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6306BC25187891E800078DB0 /* main.cpp in Sources */,
-				6306BC401878BBA800078DB0 /* Texture.cpp in Sources */,
 				6306BC3A1878937600078DB0 /* window.cpp in Sources */,
 				6306BC3D1878BB8D00078DB0 /* Button.cpp in Sources */,
 			);
