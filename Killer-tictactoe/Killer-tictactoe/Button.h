@@ -35,7 +35,7 @@ public:
     void render(SDL_Renderer* ren);
     //Self explanatory, only to be either 1 or 2
     //void setPlayer(int in);
-    
+    buttonSprite getCurrentSprite();
 private:
     bool rendered;
     //The button's destination on the renderer

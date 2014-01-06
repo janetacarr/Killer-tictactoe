@@ -42,9 +42,36 @@ void initButtons() {
     buttons[8] = Button();
     buttons[8].setPosition(400, 400);
 }
-
+//Check to see if there is winner.
 bool checkWinner() {
-    
+    //Representing the states as something easy to check
+    char states[9] = {'0','1','2','3','4','5','6','7','8'};
+    for (int i = 0; i < 9; i++) {
+        if (buttons[i].getCurrentSprite() == BUTTON_O) {
+            states[i] = 'O';
+        } else if (buttons[i].getCurrentSprite() == BUTTON_X) {
+            states[i] = 'X';
+        }
+    }
+    //Winning states.
+    if ( (states[0] == states[1]) && (states[1] == states[2]) ) {
+        return true;
+    } else if ( (states[3] == states[4]) && (states[4] == states[5]) ) {
+        return true;
+    } else if ( (states[6] == states[7]) && (states[7] == states[8]) ) {
+        return true;
+    } else if ( (states[0] == states[4]) && (states[4] == states[8]) ) {
+        return true;
+    } else if ( (states[2] == states[4]) && (states[4] == states[6]) ) {
+        return true;
+    } else if ( (states[0] == states[3]) && (states[3] == states[6]) ) {
+        return true;
+    } else if ( (states[1] == states[4]) && (states[4] == states[7]) ) {
+        return true;
+    } else if ( (states[2] == states[5]) && (states[5] == states[8]) ) {
+        return true;
+    } else
+        return false;
 }
 int main(int argc, const char * argv[])
 {
@@ -78,6 +105,7 @@ int main(int argc, const char * argv[])
                 }
             }
         }
+        
         //Clear renderer
         //win.Clear();
         //Draw background
@@ -90,6 +118,10 @@ int main(int argc, const char * argv[])
         
         //Bring everything in the back to the front.
         win.Present();
+        if (checkWinner()) {
+            quit = true;
+            SDL_Delay(2000);
+        }
     }
     win.~Window();
 }

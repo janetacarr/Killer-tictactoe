@@ -102,3 +102,6 @@ void Button::render(SDL_Renderer* ren) {
         return;
     }
 }
+buttonSprite Button::getCurrentSprite() {
+    return currentSprite;
+}
