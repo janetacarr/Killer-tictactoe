@@ -28,6 +28,7 @@ public:
     //Box represents the current window size
     void Box();
     SDL_Texture* LoadImage(const std::string &file);
+    SDL_Renderer* getRenderer();
 private:
     SDL_Window* mWindow;
     SDL_Renderer* mRenderer;

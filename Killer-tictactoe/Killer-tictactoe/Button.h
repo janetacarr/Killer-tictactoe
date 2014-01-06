@@ -12,6 +12,8 @@
 #include <iostream>
 #include "SDL2/SDL.h"
 #include "SDL2_image/SDL_image.h"
+//Needed static constant to manage O or X states across buttons
+static int player = 1;
 
 enum buttonSprite {
     BUTTON_BLANK = 0,
@@ -30,15 +32,20 @@ public:
     //Handle mouse button click event on the button
     void handleEvent(SDL_Event* e);
     //Render's button state in the form of texture in the background, so Window's present method can push it to the front.
-    void render();
+    void render(SDL_Renderer* ren);
+    //Self explanatory, only to be either 1 or 2
+    //void setPlayer(int in);
     
 private:
+    bool rendered;
+    //The button's destination on the renderer
+    SDL_Rect dstRect;
     //Button texture width and height
     int texWidth, texHeight;
     
     int buttonWidth, buttonHeight;
     //Player states, either 1 or 2.
-    int player;
+    //int player;
     //Coordinates the button, the upper left hand corner
     SDL_Point Position;
     //Buttn texture. Initially blank/null.

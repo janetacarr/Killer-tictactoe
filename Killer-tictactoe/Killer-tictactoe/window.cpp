@@ -51,6 +51,9 @@ SDL_Texture* Window::LoadImage(const std::string &file) {
     }
     return tex;
 }
+SDL_Renderer* Window::getRenderer() {
+    return mRenderer;
+}
 //Broken, Reneders full texture to full renderer.
 void Window::Draw(SDL_Texture* tex, SDL_Rect *srcRect, SDL_Rect *dstRect) {
     
