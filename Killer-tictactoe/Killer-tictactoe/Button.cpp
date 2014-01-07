@@ -86,6 +86,7 @@ void Button::handleEvent(SDL_Event* e) {
 void Button::render(SDL_Renderer* ren) {
     if (currentSprite == BUTTON_O) {
         SDL_Surface* surf = IMG_Load("/Users/justincarr/Killer-tictactoe/Killer-tictactoe/textures/o.png");
+        SDL_SetColorKey(surf, SDL_TRUE, SDL_MapRGB(surf->format, 0xFF, 0, 0xFF));
         texture = SDL_CreateTextureFromSurface(ren, surf);
         SDL_QueryTexture(texture, NULL, NULL, &dstRect.w, &dstRect.h);
         SDL_RenderCopy(ren, texture, NULL, &dstRect);
@@ -94,6 +95,7 @@ void Button::render(SDL_Renderer* ren) {
         return;
     } else if(currentSprite == BUTTON_X){
         SDL_Surface* surf = IMG_Load("/Users/justincarr/Killer-tictactoe/Killer-tictactoe/textures/x.png");
+        SDL_SetColorKey(surf, SDL_TRUE, SDL_MapRGB(surf->format, 0xFF, 0, 0xFF));
         texture = SDL_CreateTextureFromSurface(ren, surf);
         SDL_QueryTexture(texture, NULL, NULL, &dstRect.w, &dstRect.h);
         SDL_RenderCopy(ren, texture, NULL, &dstRect);
