@@ -105,13 +105,10 @@ int main(int argc, const char * argv[])
                 }
             }
         }
-        
-        //Clear renderer
-        //win.Clear();
         //Draw background
         win.Draw(texture, NULL, NULL);
-        //Render all clicked button textures
         
+        //Render all clicked button textures
         for (int i = 0; i < 9; i++) {
             buttons[i].render(win.getRenderer());
         }

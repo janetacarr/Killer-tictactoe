@@ -35,11 +35,12 @@ Window::Window(std::string title, int width , int height) {
     if (mRenderer == nullptr) {
         throw std::runtime_error("Failed to create renderer.");
     }
-    
 }
 Window::~Window() {
     SDL_DestroyRenderer(mRenderer);
     SDL_DestroyWindow(mWindow);
+    mWindow = NULL;
+    mRenderer = NULL;
     IMG_Quit();
     SDL_Quit();
 }

@@ -27,6 +27,7 @@ Button::Button() {
 Button::~Button() {
     if (texture != nullptr) {
         SDL_DestroyTexture(texture);
+        texture = NULL;
     }
     
 }
@@ -93,7 +94,7 @@ void Button::render(SDL_Renderer* ren) {
         SDL_FreeSurface(surf);
         rendered = true;
         return;
-    } else if(currentSprite == BUTTON_X){
+    } else if(currentSprite == BUTTON_X) {
         SDL_Surface* surf = IMG_Load("/Users/justincarr/Killer-tictactoe/Killer-tictactoe/textures/x.png");
         SDL_SetColorKey(surf, SDL_TRUE, SDL_MapRGB(surf->format, 0xFF, 0, 0xFF));
         texture = SDL_CreateTextureFromSurface(ren, surf);
